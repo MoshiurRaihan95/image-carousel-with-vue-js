@@ -1,6 +1,5 @@
 <script setup>
  import {fullImage, images, changeImage} from './data/carousel.js';
-
 </script>
 
 
@@ -9,6 +8,11 @@
    <section class="container mx-auto flex items-center flex-col">
         <h1 class="text-center text-2xl py-10">Events & Reactivity</h1>
         <div class="">
+            <!-- <CCarousel controls indicators transition="crossfade">
+              <CCarouselItem>
+                <img @click="changeImage(image)" class="cursor-pointer" v-for="image in images" :key="image.thumb" :src="image.thumb">
+              </CCarouselItem>
+            </CCarousel> -->
             <div class="flex space-x-2">
                 <img @click="changeImage(image)" class="cursor-pointer" v-for="image in images" :key="image.thumb" :src="image.thumb">
                 <!-- <img class="cursor-pointer" src="https://images.unsplash.com/photo-1682695794816-7b9da18ed470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=300&q=60" alt="">
